@@ -1,0 +1,184 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* pega contenido arriba */
+  align-items: center;         /* centra horizontalmente */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 50px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1em;
+  background: #ff6f91;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease, opacity 1s ease;
+  margin-bottom: 20px;
+}
+button:hover {
+  background: #ff4d6d;
+  transform: scale(1.05);
+}
+
+/* Contenedor sorpresa */
+#sorpresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; /* espacio aumentado entre botón, carta y contador */
+  margin: 0;
+  padding: 0;
+}
+
+/* Botón recuerdos sin margen arriba */
+#btnRecuerdos {
+  margin-top: -120px; /* sin margen arriba */
+  margin-bottom: 6px; /* margen abajo */
+}
+
+/* Clases para ocultamientos */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+}
+
+/* Animación fade-out */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+/* Galeria */
+#galeria {
+  margin: 0;
+  padding-top: 70px; /* espacio para botón fijo */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.message {
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 700px;
+  background: rgba(255,255,255,0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 0, 100, 0.7);
+  font-size: 24px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+#intro-image-container {
+  max-width: 280px;       /* ancho máximo para la imagen */
+  width: 100%;            /* imagen responsiva */
+  height: auto;           /* mantener proporción */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-top: -40px;      /* quitar margen arriba */
+  margin-bottom: 40px;    /* dejar espacio para el botón */
+}
+
+#intro-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Botón regresar fijo */
+#btnRegresar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: #ff6f91;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.4s ease, transform 0.4s ease, opacity 1s ease;
+}
+#btnRegresar:hover {
+  background: #ff4d6d;
+  transform: translateX(-50%) scale(1.05);
+}
+.gallery-video {
+  width: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
