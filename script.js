@@ -69,7 +69,25 @@ btnRegresar.addEventListener('click', () => {
 });
 
 // Texto carta con efecto máquina de escribir
-const textoCarta = "xxxxxxxxxxxxxxxxxxxxxxxxx";
+const textoCarta = `
+Feliz cumpleaños, mi amor ❤️
+
+Hoy celebramos el día en que nació el amor de mi vida,
+mi otra mitad, mi compañera de aventuras,
+esa que siempre me impulsa a explorar y descubrir
+cosas nuevas.
+Gracias por enseñarme a disfrutar cada paseo y cada momento juntos.
+
+Este es otro cumpleaños de muchos más que espero
+celebrar a tu lado, acercándonos cada vez más,
+hasta que solo sea despertar y decirte
+"Feliz cumpleaños, amor" mirándote a los ojos.
+
+Este pequeño esfuerzo es solo un reflejo de lo mucho que te mereces, 
+te mereces esto y mucho mas porque eres un amor conmigo espero que nuestra salida del precumpleaños sea de tu agrado y pues este regalo sea el plus para empezar este dia tan especial con una sonrisa asi que amor no tengo nada mas que decir que 🎉feliz cumpleaños al amor de mi vida🎉
+
+Te amo con todo mi corazón, hoy y siempre 💕
+`;
 let i = 0;
 function escribirCarta(){
   if(i < textoCarta.length){
