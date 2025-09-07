@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumpleaños ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>Feliz Cumpleaños, mi amor ❤️</header>
+  <div id="intro-image-container">
+  <img src="Imagenes/Beso.jpg" alt="Regalo especial" id="intro-image" />
+</div>
+
+<button id="btnAbrirRegalo">Haz clic para abrir tu regalo 🎁</button>
+  
+  <!-- Sección principal -->
+  <div id="principal" class="visible">
+    <div id="sorpresa" class="hidden">
+      <button id="btnRecuerdos">📸 Nuestros recuerdos</button>
+
+      <div class="message">
+        <h2>💌 Para ti</h2>
+        <p id="carta"></p>
+      </div>
+
+      <div class="counter">
+        <h2>⏳ Tiempo juntos</h2>
+        <p id="contador"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección galería, oculta inicialmente -->
+  <div id="galeria" class="hidden">
+    <button id="btnRegresar">← Regresar</button>
+    <div class="gallery">
+      <img src="Imagenes/Inicio.jpg" alt="Recuerdo 1" />
+      <video controls muted loop class="gallery-video">
+        <source src="Imagenes/VideoCole1.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <img src="Imagenes/Recuerdo2.jpg" alt="Recuerdo 3" />
+      <img src="Imagenes/mall.jpg" alt="Recuerdo 1" />
+      <img src="Imagenes/peliroja.jpg" alt="Recuerdo 1" />
+      <img src="Imagenes/sorpresa.jpg" alt="Recuerdo 1" />
+    </div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
